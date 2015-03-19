@@ -1,7 +1,12 @@
 module Shelr
+  def self.wrapper(*args)
+    Wrapper.new 
+  end
   class Menu
     def help
-      IO.popen(['shelr']).read
+      IO.popen(['shelr']) do |process|
+        process.read
+      end
     end
   end
 

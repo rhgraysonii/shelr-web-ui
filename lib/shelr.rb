@@ -1,7 +1,7 @@
 module Shelr
   class Wrapper
     def help
-      IO.popen(['shelr', '--help'])
+      help = IO.popen(['shelr']).read
     end
   end
 end

@@ -11,6 +11,13 @@ set :environment, :test
 describe "our wrapper" do
   subject { Shelr.wrapper }
 
+  describe "#play_last" do
+    it "can play the last session" do
+      io = subject.play_last
+      binding.pry
+    end
+  end
+
   describe "#help" do
     it "can open shelr help" do
       expected = %Q(

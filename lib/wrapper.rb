@@ -5,3 +5,8 @@ get '/' do
   content_type :txt
   Shelr.wrapper.help
 end
+
+get '/play_last' do
+  content_type :txt
+  Shelr.wrapper.play
+end

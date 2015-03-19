@@ -1,7 +1,17 @@
 module Shelr
-  class Wrapper
+  class Menu
     def help
-      help = IO.popen(['shelr']).read
+      IO.popen(['shelr']).read
+    end
+  end
+
+  class Wrapper
+    def initialize
+      @menu = Menu.new
+    end
+
+    def help
+      @menu.help
     end
   end
 end
